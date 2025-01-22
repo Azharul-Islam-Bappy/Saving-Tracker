@@ -8,4 +8,15 @@
   box-sizing: border-box; 
   font-size: 16px; 
   font-weight: 400;
+  text-decoration: none;
 }
+
+/* defining custom fonts */
+@font-face {
+  font-family: 'MyFont'; /* Custom name for the font */
+  src: url('../assets/fonts/custom_font.ttf') format('truetype'); 
+  font-weight: 100 900; 
+  font-stretch: 75% 100%;
+  font-style: italic; 
+}
+
