@@ -8,6 +8,10 @@ const withdrawBtn = document.querySelector(".withdraw-btn");
 const deposit = document.querySelector("#deposit");
 const depositBtn = document.querySelector(".deposit-btn");
 
+const d = []; // for storing deposit related data
+const w = []; // for storing Withdraw related data
+
+
 // event listener on depositBtn
 depositBtn.addEventListener("click", () => {
   if (deposit.value === "") {
@@ -17,10 +21,28 @@ depositBtn.addEventListener("click", () => {
     totalBalance += deposit.value;
     localStorage.setItem("totalBalance", JSON.stringify(totalBalance));
     
-    deposit.value = '';
-    deposit.placeholder = 'Deposit amount'
+    const date = new Date();
+    const obj = {};
+    
+    obj.date = {
+      day: date.getDate(),
+      month: date.getMonth(),
+      year: date.getFullYear(),
+    }
+    obj.time = {
+      hour: date.getHours();
+      hour: date.getSeconds();
+    }
+    obj.amount = deposit.value;
+    
+    d.push(obj); // pushing datas
+    localStorage.setItem("Deposits", JSON.stringify(d)); // saving data to localStorage
+    
     balanceAmountElem.innerText = '';
     balanceAmountElem.innerText = Number(totalBalance);
+    
+    deposit.value = '';
+    deposit.placeholder = 'Deposit amount'
   }
 });
 
@@ -41,9 +63,27 @@ withdrawBtn.addEventListener("click", () => {
   }
   else{
     totalBalance -= Number(withdraw.value)
+    localStorage.setItem("totalBalance", JSON.stringify(totalBalance));
+    
+    const date = new Date();
+    const obj = {};
+    
+    obj.date = {
+      day: date.getDate(),
+      month: date.getMonth(),
+      year: date.getFullYear(),
+    }
+    obj.time = {
+      hour: date.getHours();
+      hour: date.getSeconds();
+    }
+    obj.amount = withdraw.value;
+    
+    w.push(obj); // pushing datas
+    localStorage.setItem("Withdraws", JSON.stringify(w)); // saving data to localStorage
+    
     withdraw.value = "";
     withdraw.placeholder = "Withdraw amount";
-    localStorage.setItem("totalBalance", JSON.stringify(totalBalance));
   }
   
 });
