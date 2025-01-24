@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/index-main.css">
   <title>Savings Tracker - Home</title>
 </head>
 <body>
@@ -14,7 +15,7 @@
   	    <h1 class="nav-title">Savings tracker <sub>Home</sub></h1>
   	    <img class="menu" src="./assets/images/icon-menu.svg" alt="menu icon/navigation bar" />
 	    </div>
-	    <div class="menu-container display">
+	    <div class="menu-container ">
 	      <div class="menu-head">
 	        <h1 class="nav-title">Savings tracker </h1>
 	        <span class="close">Close</span>
@@ -23,10 +24,22 @@
 	      <a href="./report.html" class="report" href="#">Report</a>
 	    </div>
 	  </nav>
-	  
 	</header>
 	<main class="main-content">
-	  
+	  <section class="total-balance">
+	    <span>Total Balance: </span>
+	    <span class="balance-amount"></span>
+	  </section>
+	  <section class="deposit-withdraw">
+	    <div class="deposit-section">
+	      <input type="number" name="deposit" id="deposit" placeholder="Deposit amount" />
+	      <button class="button deposit-btn" type="button">Deposit</button>
+	    </div>
+	    <div class="withdraw-section">
+	      <input type="number" name="withdraw" id="withdraw" placeholder="Withdraw amount" />
+	      <button class="button withdraw-btn" type="button">Withdraw</button>
+	    </div>
+	  </section>
 	</main>
 	<footer class="footer-content">
 	  
