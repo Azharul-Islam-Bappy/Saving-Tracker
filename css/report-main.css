@@ -1,0 +1,67 @@
+
+.total-balance{
+  padding: 1rem; 
+  text-align: center;
+  color: #6bb58d;
+  margin-bottom: 3rem;
+  
+  span{
+    font-size: 1.8rem; 
+    font-weight: 490;
+  }
+}
+
+h3{
+  font-size: 18px; 
+  font-weight: 490;
+  text-align: center;
+  color: #6bb58d;
+}
+
+table{
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+tr{
+  width: 100%;
+  padding: 4px;
+  margin-block: 2px 0.5px;
+  font-size: 17px;
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  
+  th{
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  td, th{
+    width: 33.333%;
+    font-size: 17px;
+    text-align: left; 
+    padding: 0.6rem;
+    background-color: #dffebb;
+    border-right: 1.5px solid #dffebb;
+  }
+}
+
+.withdraws-section, .deposits-section{ 
+  margin-bottom: 3rem;
+  vertical-align: center;
+}
+
+.no-data{
+  margin-block: 2rem;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+/* media quries */ 
+@media only screen and (min-width: 1080px) {
+  table{
+    width: 70%;
+    margin-inline: auto;
+  }
+}

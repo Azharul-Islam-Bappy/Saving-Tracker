@@ -1,0 +1,23 @@
+
+/* footer styles */ 
+footer{
+  width: 100%;
+  margin-block: 2rem;
+  padding-inline: 1rem;
+  font-size: 10px;
+  text-align: center;
+  color: #aeaeae;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  
+  p{
+    width: 70%;
+    margin-inline: auto;
+    text-align: center;
+  }
+  
+  span{
+    color: #8888fd;
+  }
+}

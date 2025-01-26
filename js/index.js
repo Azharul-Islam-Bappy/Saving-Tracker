@@ -18,7 +18,7 @@ depositBtn.addEventListener("click", () => {
     alert("please enter amount");
   }
   else{
-    totalBalance += deposit.value;
+    totalBalance += Number(deposit.value);
     localStorage.setItem("totalBalance", JSON.stringify(totalBalance));
     
     const date = new Date();
@@ -28,11 +28,11 @@ depositBtn.addEventListener("click", () => {
       day: date.getDate(),
       month: date.getMonth(),
       year: date.getFullYear(),
-    }
+    };
     obj.time = {
-      hour: date.getHours();
-      hour: date.getSeconds();
-    }
+      hour: date.getHours(),
+      minute: date.getMinutes()
+    };
     obj.amount = deposit.value;
     
     d.push(obj); // pushing datas
@@ -66,7 +66,7 @@ withdrawBtn.addEventListener("click", () => {
     localStorage.setItem("totalBalance", JSON.stringify(totalBalance));
     
     const date = new Date();
-    const obj = {};
+    const obj = {}
     
     obj.date = {
       day: date.getDate(),
@@ -74,8 +74,8 @@ withdrawBtn.addEventListener("click", () => {
       year: date.getFullYear(),
     }
     obj.time = {
-      hour: date.getHours();
-      hour: date.getSeconds();
+      hour: date.getHours(),
+      minute: date.getMinutes()
     }
     obj.amount = withdraw.value;
     
@@ -88,4 +88,5 @@ withdrawBtn.addEventListener("click", () => {
   
 });
 
+balanceAmountElem.innerText = '';
 balanceAmountElem.innerText = totalBalance;
